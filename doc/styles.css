@@ -1,0 +1,123 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #2C2C2C; /* Dark Charcoal */
+    background-color: #FDFDFD; /* Off-White */
+    line-height: 1.6;
+}
+
+/* Tabs */
+.tab-buttons {
+    display: flex;
+    border-bottom: 2px solid #E0E0E0; /* Light Gray Border */
+    margin-bottom: 20px;
+}
+
+.tab-buttons button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    background: #FDFDFD; /* Matches background */
+    font-size: 1em;
+    color: #2C2C2C; /* Charcoal Text */
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab-buttons button:hover {
+    background: #F4F0EB; /* Light Beige Hover */
+}
+
+.tab-buttons .active {
+    background: #E8B07D; /* Soft Orange */
+    color: #FFFFFF; /* White Text */
+}
+
+.tab-content {
+    display: none;
+    padding: 20px;
+    background: #FFFFFF; /* White Container */
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Projects */
+.project {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #FFFFFF;
+    border: 1px solid #E0E0E0;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.project img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.project:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Tile Layout */
+.tile-container {
+    display: flex; /* Enable flexbox layout */
+    flex-wrap: wrap; /* Allow wrapping to the next line if necessary */
+    justify-content: space-around; /* Add spacing between tiles */
+    gap: 20px; /* Optional: Add space between tiles */
+    padding: 20px; /* Optional: Add padding to the container */
+}
+
+.tile {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    background: #FFFFFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.tile img {
+    width: 100%;
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.tile-title {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background: rgba(44, 44, 44, 0.7); /* Semi-transparent Charcoal */
+    color: #FFFFFF;
+    padding: 10px;
+    font-size: 1em;
+}
+
+.tile:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.tile:hover img {
+    transform: scale(1.05);
+}
+
+.tile:hover .tile-title {
+    background: rgba(44, 44, 44, 0.9); /* Darker Charcoal on Hover */
+}

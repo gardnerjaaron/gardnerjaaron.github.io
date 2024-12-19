@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="tab-container">
+    <!-- Navigation for different sections -->
+    <div class="tab-buttons">
+        <button class="tab-button active" onclick="openTab(event, 'About')">About Me</button>
+        <button class="tab-button" onclick="openTab(event, 'Projects')">Projects</button>
+        <button class="tab-button" onclick="openTab(event, 'Resume')">Resume</button>
+        <!-- <button class="tab-button" onclick="openTab(event, 'Articles')">Articles</button> -->
+    </div>
+
+    <!-- Tab Content -->
+    <div id="About" class="tab-content active">
+        <h2>About Me</h2>
+        <p>Write a brief bio here with an image if you like.</p>
+    </div>
+<!-- PROJECTS  -->
+    <div id="Projects" class="tab-content">
+        <body>
+            <header>
+                <h1>My Projects</h1>
+            </header>
+            <main class="tile-container">
+                <!-- Project 1 -->
+                <div class="tile">
+                    <a href="Projects/mandelbrot.html">
+                        <img src="images/mandelbrot.bmp" alt="Project 1">
+                        <div class="tile-title">mandelbrot</div>
+                    </a>
+                </div>
+                <!-- Project 2 -->
+                <div class="tile">
+                    <a href="Projects/Remarkable.html">
+                        <img src="images/remarkable.png" alt="Project 2">
+                        <div class="tile-title">Project 2</div>
+                    </a>
+                </div>
+                <!-- Add more tiles here -->
+            </main>
+        </body>
+    </div>
+
+    <div id="Resume" class="tab-content">
+        <h2>Resume</h2>
+        <p>Link to or embed your resume, or display key sections like experience, skills, and education.</p>
+
+
+    </div>
+
+    <!-- <div id="Articles" class="tab-content">
+        <h2>Articles</h2>
+        <p>Link to your articles, blogs, or published work with a brief description or preview.</p>
+    </div> -->
+
+</div>
+
+<script src="script.js"></script>
+
+
+
