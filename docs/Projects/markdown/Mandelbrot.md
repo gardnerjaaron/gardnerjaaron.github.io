@@ -3,7 +3,7 @@
 The Mandelbrot set is visualized on the [complex plane](https://en.wikipedia.org/wiki/Complex_plane), where it is calculated until it either hits the maximum iteration number or diverges. The escape time (number of iterations) determines the pixel value and, in this example, is assigned a color corresponding to the number of iterations it takes to escape. The points where the Mandelbrot set exists are colored black, while points outside the set are assigned colors based on how long they take to diverge.
 
 <center>
-<img src="/docs/assets/mandelbrot_whole.png" alt="entire mandelbrot set width="300" height="300">
+<img src="../assets/mandelbrot_whole.png" alt="entire mandelbrot set width="300" height="300">
 </center>
 
 **The iterative formula**:
@@ -13,8 +13,9 @@ $$ z\_0 = 1 $$
 ---
 
 ```cpp
-whil(iterations < MAX_ITER &&(z_real * z_real + z_imaginary * z_imaginary) <= 2.0)
+while(iterations < MAX_ITER &&(z_real * z_real + z_imaginary * z_imaginary) <= 2.0)
 ```
+
 ```cpp
 int mandelbrot(double real, double imaginary){
     int iterations = 0 ;
@@ -72,8 +73,8 @@ Once the number of iterations has been calculated, we can apply coloring to the 
 ```
 
 <div style="display: flex; gap: 10px; justify-content: center;">
-    <img src="/docs/assets/mandelbrot_whole _linear_color.png" alt="Image 1" style="width: 45%; height: auto;">
-    <img src="/docs/assets/quadratic_color_weights.png" alt="Image 2" style="width: 50%; height: 50%;">
+    <img src="../assets/mandelbrot_whole _linear_color.png" alt="Image 1" style="width: 45%; height: auto;">
+    <img src="../assets/quadratic_color_weights.png" alt="Image 2" style="width: 50%; height: 50%;">
 </div>
 
 As you can see from the images in this example, the color is much more banded, meaning there are more distinct lines in the images, and the colors are not blended as much. The graph on the left represents the colors based on the number of iterations.
