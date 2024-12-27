@@ -32,6 +32,8 @@ int mandelbrot(double real, double imaginary){
 }
 ```
 
+I used the escape version of the algoritum for each iteration we check the number of iterations and the distance from the center thsi is because the mandelbrot set only goes to 2 
+
 ## Deep Dive
 
 ---
@@ -95,6 +97,17 @@ Even though the iteration numbers remain unchanged, we get completely different 
 
 ---
 
+## Juilia set
+
+The Julia Set is related to the mandelbort set but using a constant complex number when the constant is changed the julia set is whole new julia set here some examples of differnt constanst for the julia set.
+
+$$ z\_{n+1} = z\_n^2 + c $$
+
+<div style="display: flex; gap: 10px; justify-content: center;">
+    <img src="../assets/julia-.79+15_color2.png" alt="Image 1" style="width: 45%; height: auto;">
+    <img src="../assets/julia.28.008color2.png" alt="Image 2" style="width: 50%; height: 50%;">
+</div>
+
 ## To-Do List
 
 ### Visual Settings
@@ -106,10 +119,5 @@ Even though the iteration numbers remain unchanged, we get completely different 
 ### Features
 
 - Expand the fractals collection:
-  - Julia.
+  - Newton
 
-### Website
-
-- Update the website:
-  - Include the new fractals and color options.
-  - Replace outdated images with updated visuals.

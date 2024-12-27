@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mandelbrot Set</title>
+  <link rel="stylesheet" href="../styles.css"> <!-- Adjust path for CSS -->
+  <script src="../script.js"></script> <!-- Adjust path for JS -->
+  <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+    }
+    h1, h2 {
+      color: #333;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    pre {
+      background-color: #f4f4f4;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 10px;
+      overflow-x: auto;
+    }
+    code {
+      font-family: "Courier New", Courier, monospace;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+    <a href="../index.html">← Back to Home</a>
+    <div id="content">
+    <!-- Markdown content will be rendered here -->
+  </div>
+
+  <script>
+    // Fetch the Markdown file and convert it to HTML
+    const converter = new showdown.Converter({
+        
+    });
+    fetch('markdown/Wordsearch.md')
+      .then(response => response.text())
+      .then(markdown => {
+
+        const htmlContent = converter.mak    <!-- Markdown content will be rendered here -->
+        eHtml(markdown);
+        document.getElementById('content').innerHTML = htmlContent;
+         MathJax.typesetPromise();
+      })
+      .catch(error => console.error('Error loading Markdown file:', error));
+  </script>
+</body>
+</html>
