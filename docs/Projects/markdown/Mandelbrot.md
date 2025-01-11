@@ -32,7 +32,7 @@ int mandelbrot(double real, double imaginary){
 }
 ```
 
-I used the escape version of the algoritum for each iteration we check the number of iterations and the distance from the center thsi is because the mandelbrot set only goes to 2 
+I used the escape version of the algoritum for each iteration we check the number of iterations and the distance from the center thsi is because the mandelbrot set only goes to 2
 
 ## Deep Dive
 
@@ -120,4 +120,3 @@ $$ z\_{n+1} = z\_n^2 + c $$
 
 - Expand the fractals collection:
   - Newton
-

@@ -1,10 +1,26 @@
-# Remarkable  
 
-## To make it a script move to /usr/local/bin/ and remae to rmsync
+# Remarkable File Sync Tool
+
+This script allows you to download files from your reMarkable tablet's file system, manage version control, and organize files efficiently.
+
+## Prerequisites
+
+- Python 3.x
+- Required Python libraries: `requests`, `argparse`, `logging`
+- reMarkable tablet connected to your network (default base URL: `http://10.11.99.1`)
+- `jq` installed for JSON parsing (for manual usage of `curl` commands)
+
+## Installation
+
+1. Move the script to `/usr/local/bin/` and rename it to `rmsync` for convenient use:
+
+```bash
+   sudo mv sync.py /usr/local/bin/rmsync
+```
 
 ## How to get the root file names
 
-```bash
+``` bash
 curl --silent http://10.11.99.1/documents/ | jq -r '.[] | .VissibleName'
 ```
 
@@ -28,13 +44,12 @@ python3 sync.py "travel"
 
 TODO
 
-- specify a plce to put the files once they are downloaded
-- recursive into folders beyond root / folders in folders
 - upload
-- fix error with some random files
 - allow updateing of file/ only download the ones that have changed
+  - this is dont using git but needs to be poslihed some.
 - make a small ui for download and upload this should be optional to use and the command line shoudl still be a option so that is can be automated
 - work on some scripts to automate it on start up if there is a device detected
+  - seems possible to automate but 
 - add fuctionalty for folders within folders to be maintained and for them to stay in the correct order
 - backup mode where it dowloads everything and compresses it for a more robust backup method
--
+

@@ -14,14 +14,73 @@
     <div class="tab-buttons">
         <button class="tab-button active" onclick="openTab(event, 'About')">About Me</button>
         <button class="tab-button" onclick="openTab(event, 'Projects')">Projects</button>
-        <button class="tab-button" onclick="openTab(event, 'Resume')">Resume</button>
+        <!-- <button class="tab-button" onclick="openTab(event, 'Resume')">Resume</button> -->
         <!-- <button class="tab-button" onclick="openTab(event, 'Articles')">Articles</button> -->
     </div>
 
     <!-- Tab Content -->
     <div id="About" class="tab-content active">
-        <h2>About Me</h2>
-        <p>Write a brief bio here with an image if you like.</p>
+        <div class="about-container">
+            <img src="assets/biophoto.jpg" alt="My Photo" class="image">
+            <div class="text">
+                <p>
+                    Hi! I’m Aaron Gardner, a passionate junior developer and college student at the 
+                    University of Texas at Arlington, with a love for computers, animals, and cooking. 
+                    Currently, I am a visual integration co-op at CAE, where I explore creative ways to 
+                    bring ideas to life. My goal is to sharpen my technical skills and build impactful 
+                    projects that showcase my creativity. When I’m not coding or studying, I enjoy hiking, 
+                    camping, and experimenting with new recipes.
+                </p>
+            </div>
+        </div>
+        <div class="links">
+            <h3>Connect with Me</h3>
+            <a href="https://github.com/gardnerjaaron" target="_blank">GitHub</a>
+            <a href="https://www.linkedin.com/in/aaron-gardner-7079a22b2?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BG5EGqa3ERyi7Hqv4geNpCw%3D%3D" target="_blank">LinkedIn</a>
+            <!-- <a href="mailto:your.email@example.com">Email Me</a> -->
+        </div>
+        <div class="experience-section">
+            <h2>Experience</h2>
+            <div class="experience-container">
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="content">
+                        <h3>CAE</h3>
+                        <h4>Visual integration Co-op</h4>
+                        <p> Oct 2021 - Present</p>
+                        <ul>
+                            <li>Collaborated with multidisciplinary teams to develop and integrate visual systems for simulation projects, enhancing training experiences for clients</li>
+                            <li>Documented technical processes and updates, providing a clear reference for future development and support.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="content">
+                        <h3>Wag Time Pets</h3>
+                        <h4></h4>
+                        <p>March 2019 - October 2021</p>
+                        <ul>
+                            <li>Built strong relationships with clients by providing regular updates, tailored care plans, and excellent customer service. </li>
+                            <li>Supervised daily operations, ensuring the safety and well-being of 30+ dogs in a dynamic environment. </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- <div class="experience-item">
+                    <div class="timeline-dot"></div>
+                    <div class="content">
+                        <h3>EduLearn</h3>
+                        <h4>Junior Developer</h4>
+                        <p>2018 - 2020</p>
+                        <ul>
+                            <li>Assisted in developing an e-learning platform for 10,000+ users.</li>
+                            <li>Wrote automated test scripts to ensure software quality.</li>
+                            <li>Contributed to the migration of legacy systems to cloud-based platforms.</li>
+                        </ul>
+                    </div>
+                </div> -->
+            </div>
+        </div>
     </div>
 <!-- PROJECTS  -->
     <div id="Projects" class="tab-content">
@@ -55,12 +114,12 @@
         </body>
     </div>
 
-    <div id="Resume" class="tab-content">
+    <!-- <div id="Resume" class="tab-content">
         <h2>Resume</h2>
         <p>Link to or embed your resume, or display key sections like experience, skills, and education.</p>
 
 
-    </div>
+    </div> -->
 
     <!-- <div id="Articles" class="tab-content">
         <h2>Articles</h2>
