@@ -32,9 +32,7 @@ int mandelbrot(double real, double imaginary){
 }
 ```
 
-I used the escape version of the algoritum for each iteration we check the number of iterations and the distance from the center thsi is because the mandelbrot set only goes to 2
-
-## Deep Dive
+Here is the primary function used to generate the Mandelbrot set and Julia set. I used the escape version of the algorithm. For each iteration, we check the number of iterations and the distance from the center. This is because the Mandelbrot set only extends to a distance of 2. If ∣z∣ becomes greater than 2, we assume that the point "escapes." If we reach the maximum number of iterations before the point escapes, we say this point belongs to the Mandelbrot set. The iteration count is stored, and this is what we use for coloring each pixel.
 
 ---
 
@@ -74,12 +72,12 @@ Once the number of iterations has been calculated, we can apply coloring to the 
     b = static_cast<uint8_t>(color_mut[2] * (1 - iter_normal)  * iter_normal * 255);
 ```
 
-<div style="display: flex; gap: 10px; justify-content: center;">
+<div style="display: flex; gap: 20px; justify-content: center;">
     <img src="../assets/mandelbrot_whole _linear_color.png" alt="Image 1" style="width: 45%; height: auto;">
     <img src="../assets/quadratic_color_weights.png" alt="Image 2" style="width: 50%; height: 50%;">
 </div>
 
-As you can see from the images in this example, the color is much more banded, meaning there are more distinct lines in the images, and the colors are not blended as much. The graph on the left represents the colors based on the number of iterations.
+As you can see from the images in this example, the color is more banded, meaning there are more distinct lines in the images, and the colors are not blended as much. The graph on the left represents the colors based on the number of iterations.
 
 ```cpp
     r = static_cast<uint8_t>(color_mut[0] * (1 - iter_normal) * iter_normal * iter_normal * iter_normal * 255);
@@ -88,7 +86,7 @@ As you can see from the images in this example, the color is much more banded, m
 
 ```
 
-<div style="display: flex; gap: 10px; justify-content: center;">
+<div style="display: flex; gap: 20px; justify-content: center;">
     <img src="../assets/mandelbrot_whole.png" alt="Image 1" style="width: 45%; height: auto;">
     <img src="../assets/higher_order_quadratic.png" alt="Image 2" style="width: 50%; height: 50%;">
 </div>
@@ -99,24 +97,17 @@ Even though the iteration numbers remain unchanged, we get completely different 
 
 ## Juilia set
 
-The Julia Set is related to the mandelbort set but using a constant complex number when the constant is changed the julia set is whole new julia set here some examples of differnt constanst for the julia set.
+The Julia Set is related to the mandelbort set but using a constant complex number to generte. When the constant is changed the julia set is whole new julia set here some examples of differnt constants for the julia set.
 
 $$ z\_{n+1} = z\_n^2 + c $$
 
-<div style="display: flex; gap: 10px; justify-content: center;">
+<div style="display: flex; gap: 20px; justify-content: center;">
     <img src="../assets/julia-.79+15_color2.png" alt="Image 1" style="width: 45%; height: auto;">
     <img src="../assets/julia.28.008color2.png" alt="Image 2" style="width: 50%; height: 50%;">
 </div>
 
-## To-Do List
+The iterative formula for the julia set you can see it is very similar to the mandelbort set with the only differnce being the constant is a fixed value.
 
-### Visual Settings
+$$ z\_{n+1} = z\_n^2 + c $$
 
-- Experiment with color settings:
-  - Aim for a palette with more orange and red tones instead of black and blue.
-- Add more color iteration options for customization.
-
-### Features
-
-- Expand the fractals collection:
-  - Newton
+In the Julia set, the behavior of the sequence starting at an arbitary $z\_0$ is analyed for a fixed comlpex constant C. Like the madelbort set, the interation stops if $|z\_0| > 2 $, as this indicates the sequesnce will escape to infinity.The choice of c greatly affects the appearance of the Julia set, producing either connected, intricate fractals or completely disconnected "dust-like" structures. For example, c = -0.4+0.6i produces a connected fractal, while c = 0.355 + 0.355i results in a dust-like pattern. the process of generating Julia set is conputaonally very similar to the mandelbrot set.
