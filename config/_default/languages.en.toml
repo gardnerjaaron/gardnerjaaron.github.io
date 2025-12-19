@@ -71,9 +71,8 @@ title = "Aaron Gardner"
   name = "Aaron Gardner"
   image = "img/biophoto.jpg"
   headline = "Junior Developer | CS Student at UTA"
-  bio = "Brief description about yourself"
   links = [
     { email = "mailto:gardnerjaaron@gmail.com" },
     { github = "https://github.com/gardnerjaaron" },
-    { linkedin = "www.linkedin.com/in/aaron-gardner-707" },
+    { linkedin = "https://linkedin.com/in/aaron-gardner-7079a22b2/" },
   ]
